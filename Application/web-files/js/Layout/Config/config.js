@@ -29,15 +29,15 @@ $(document).ready(function () {
     $('form[name=uForm]').submit(function (event) {
         event.preventDefault();
         var params = $(this).serialize();
-        var request_uri = $("#request_uri").val();
+        var request_uri = $("#request_uri").val();    
         $("#error").html("Loading...");
         $.ajax({
             type: 'post',
             data: params,
             url: request_uri + 'ajax/username-config',
             success: function (data) {
-                console.log(data);
                 if (data['outcome'] == true) {
+                    console.log(data);
                     window.location.href = request_uri + 'app/sucess-config'
                 } else {
                     $("#error").html(data['message'])

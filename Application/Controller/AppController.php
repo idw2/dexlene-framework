@@ -8,9 +8,7 @@ Class AppController extends Controller {
 
     public function index() {
         $this->layout = "Startbootstrap-sb-admin-1.0.2";
-        
         $this->redirec("app/welcome");
-        
     }
 
     public function database_config() {

@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:25477552353a499fa76-04989069%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:75355253af0896245-40507994%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,17 +9,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '25477552353a499fa76-04989069',
+  'nocache_hash' => '75355253af0896245-40507994',
   'variables' => 
   array (
     'request_uri' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552353a4c79fb6_27640632',
+  'unifunc' => 'content_55253af091f771_57189942',
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552353a4c79fb6_27640632')) {function content_552353a4c79fb6_27640632($_smarty_tpl) {?><form method="post" action="/dexlene-framework/app/database-config" style="width: 80%">
+<?php if ($_valid && !is_callable('content_55253af091f771_57189942')) {function content_55253af091f771_57189942($_smarty_tpl) {?><form method="post" action="/dexlene-framework/app/database-config" style="width: 80%">
   <h1>TERMO DE USO - LICENÇA</h1>
   <div class="inset">
   <p>

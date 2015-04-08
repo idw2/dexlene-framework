@@ -140,10 +140,14 @@ if (CONTROLLER_DIR != "") {
 
 if (class_exists('Database')) {
     try {
-        $dbh = new pdo("mysql:host=".Database::$host.";dbname=".Database::$dbname, Database::$username, Database::$password, @array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        new pdo("mysql:host=" . Database::$host . ";dbname=" . Database::$dbname, Database::$username, Database::$password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     } catch (PDOException $ex) {
-        if($_GET["url"] != "ajax/sem-conexao"){
-            $_GET["url"] = "app/sem-conexao";
+        try {
+            new pdo("mysql:host=" . Database::$host . ":" . Database::$port . ";dbname=" . Database::$dbname, Database::$username, Database::$password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        } catch (PDOException $ex) {
+            if ($_GET["url"] != "ajax/sem-conexao") {
+                $_GET["url"] = "app/sem-conexao";
+            }
         }
     }
 } else {

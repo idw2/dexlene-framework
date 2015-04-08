@@ -15,35 +15,39 @@ Class AjaxController extends Controller {
 
         $host = $_POST["host"];
         $username = $_POST["username"];
+        $port = $_POST["port"];
         $dbname = $_POST["dbname"];
         $password = $_POST["password"];
 
         try {
             $dbh = new pdo("mysql:host={$host};dbname={$dbname}", "{$username}", "{$password}", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-            $filename = CONFIG_DIR . 'database.php';
-            if (file_exists($filename)) {
-                @unlink($filename);
+        } catch (PDOException $ex) {
+            try {
+                $dbh = new pdo("mysql:host={$host}:{$port};dbname={$dbname}", "{$username}", "{$password}", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            } catch (PDOException $ex) {
+                die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
             }
+        }
 
-            $fW = fopen(CONFIG_DIR . 'database.php', 'w');
+        $filename = CONFIG_DIR . 'database.php';
+        if (file_exists($filename)) {
+            @unlink($filename);
+        }
 
-            $class = "<?php
+        $fW = fopen(CONFIG_DIR . 'database.php', 'w');
+
+        $class = "<?php
 class Database{
     static \$host = '{$host}';
-    static \$port = '{$porta}';
+    static \$port = '{$port}';
     static \$username = '{$username}';
     static \$dbname = '{$dbname}';
     static \$password = '{$password}';
 }";
+        fwrite($fW, $class);
+        fclose($fW);
 
-            fwrite($fW, $class);
-            fclose($fW);
-
-            die(json_encode(array('outcome' => true)));
-        } catch (PDOException $ex) {
-            die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
-        }
+        die(json_encode(array('outcome' => true)));
     }
 
     public function sem_conexao() {
@@ -52,7 +56,7 @@ class Database{
         $filename = CONFIG_DIR . 'database.php';
         if (file_exists($filename)) {
             @unlink($filename);
-        } 
+        }
         die(json_encode(array('outcome' => true)));
     }
 
@@ -66,10 +70,10 @@ class Database{
         $password = $_POST["password"];
         $repeat_password = $_POST["repeat_password"];
 
-        if ($name == "") {
-            die(json_encode(array('outcome' => false, 'message' => '* Required name!')));
-        } elseif (!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $email)) {
+        if (!preg_match("/^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$/", $name)) {
             die(json_encode(array('outcome' => false, 'message' => '* Invalid name!')));
+        } elseif (!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $email)) {
+            die(json_encode(array('outcome' => false, 'message' => '* Invalid e-mail!')));
         } elseif (!preg_match("/^[a-z0-9_-]{3,15}$/", $username)) {
             die(json_encode(array('outcome' => false, 'message' => '* The user field can not<br/>have invalid characters!')));
         } else if ($password != $repeat_password) {
@@ -100,7 +104,7 @@ class Database{
                         PRIMARY KEY(`id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;    
 
-                    INSERT INTO users VALUES('{$user_id}', '{$username}', '{$password}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '{name}', '{email}', 1, 1,'owner', '0');
+                    INSERT INTO users VALUES('{$user_id}', '{$username}', '{$password}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '{$name}', '{$email}', 1, 1,'owner', '0');
 
                     CREATE TABLE IF NOT EXISTS `groups` (
                         `id` char(32) NOT NULL,
@@ -117,7 +121,7 @@ class Database{
 
                     INSERT INTO groups VALUES('{$group_id}', '{$user_id}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Admin', 1, 1,'{$user_id}', '0');
 
-                    CREATE TABLE IF NOT EXISTS `premissions` (
+                    CREATE TABLE IF NOT EXISTS `permissions` (
                         `id` char(32) NOT NULL,
                         `group_id` char(32) NOT NULL,
                         `created` datetime DEFAULT NULL,
@@ -133,14 +137,10 @@ class Database{
                         PRIMARY KEY(`id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
-                    INSERT INTO premissions VALUES('{$premission_id}', '{$group_id}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 1, 1, 1, 1, 1, 1,'{$user_id}', '0');";
+                    INSERT INTO permissions VALUES('{$premission_id}', '{$group_id}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 1, 1, 1, 1, 1, 1,'{$user_id}', '0');";
 
-                $sql = System::$factory->sql()->query($query);
-                $sql->execute();
+                $sql = $this->factory->sql()->query($query);
             }
-
-
-
             die(json_encode(array('outcome' => true)));
         }
     }

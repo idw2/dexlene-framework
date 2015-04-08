@@ -5,10 +5,10 @@
     <label for="email">HOST NAME</label>
     <input type="text" name="host" id="host" required="true">
   </p>
-  {*<p>
+  <p>
     <label for="email">PORTA</label>
-    <input type="text" name="porta" id="porta" value="3306" required="true">
-  </p>*}
+    <input type="text" name="port" id="porta" value="3306" required="true">
+  </p>
   <p>
     <label for="password">USERNAME</label>
     <input type="text" name="username" id="username" required="true">

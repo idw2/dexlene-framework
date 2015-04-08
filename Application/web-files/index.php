@@ -45,6 +45,10 @@ if (!defined('CONTROLLER_DIR')) {
     define('CONTROLLER_DIR', APPLICATION_DIR . 'Controller' . DS);
 }
 
+if (!defined('HELPERS_DIR')) {
+    define('HELPERS_DIR', APPLICATION_DIR . 'Helpers' . DS);
+}
+
 if (!defined('MODEL_DIR')) {
     define('MODEL_DIR', APPLICATION_DIR . 'Model' . DS);
 }
@@ -128,6 +132,21 @@ if (MODEL_DIR != "") {
  */
 if (CONTROLLER_DIR != "") {
     $path = CONTROLLER_DIR;
+    $diretorio = dir($path);
+
+    while ($arquivo = $diretorio->read()) {
+        if ($arquivo != ".." && $arquivo != ".") {
+            require_once "{$path}{$arquivo}";
+        }
+    }
+    $diretorio->close();
+}
+
+/*
+ * CARREGANDO OS HELPERS
+ */
+if (HELPERS_DIR != "") {
+    $path = HELPERS_DIR;
     $diretorio = dir($path);
 
     while ($arquivo = $diretorio->read()) {

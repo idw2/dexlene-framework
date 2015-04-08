@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:115515525479f373bd1-09523094%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2104055255399b20ec0-14830298%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,17 +9,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '115515525479f373bd1-09523094',
+  'nocache_hash' => '2104055255399b20ec0-14830298',
   'variables' => 
   array (
     'request_uri' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5525479f3d8448_04493978',
+  'unifunc' => 'content_55255399b87ff2_58043067',
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5525479f3d8448_04493978')) {function content_5525479f3d8448_04493978($_smarty_tpl) {?><form style="width: 80%" onsubmit="return false">
+<?php if ($_valid && !is_callable('content_55255399b87ff2_58043067')) {function content_55255399b87ff2_58043067($_smarty_tpl) {?><form style="width: 80%" onsubmit="return false">
   <h1>* Successfully performed Settings!</h1>
   <div class="inset">
   </div>

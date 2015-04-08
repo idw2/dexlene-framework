@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2015-04-08 16:26:15
+<?php /* Smarty version Smarty-3.1.19, created on 2015-04-08 18:58:37
          compiled from "C:\xampp\htdocs\dexlene-framework\Application\View\Error\error_404.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1913355253a87ca9071-10328485%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:490855255e3d9d8af0-47653939%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1913355253a87ca9071-10328485',
+  'nocache_hash' => '490855255e3d9d8af0-47653939',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_55253a87cef0a6_61044664',
+  'unifunc' => 'content_55255e3da1dc54_62398758',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55253a87cef0a6_61044664')) {function content_55253a87cef0a6_61044664($_smarty_tpl) {?><form style="width: 80%">
+<?php if ($_valid && !is_callable('content_55255e3da1dc54_62398758')) {function content_55255e3da1dc54_62398758($_smarty_tpl) {?><form style="width: 80%">
   <h1><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 </h1>
 </form>

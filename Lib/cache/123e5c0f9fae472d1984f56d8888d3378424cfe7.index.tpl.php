@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:226365525479f3f7671-08917017%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1688555255e3da5ca10-44444122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '226365525479f3f7671-08917017',
+  'nocache_hash' => '1688555255e3da5ca10-44444122',
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5525479f578648_01632799',
+  'unifunc' => 'content_55255e3dbe3472_96221946',
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5525479f578648_01632799')) {function content_5525479f578648_01632799($_smarty_tpl) {?><html>
+<?php if ($_valid && !is_callable('content_55255e3dbe3472_96221946')) {function content_55255e3dbe3472_96221946($_smarty_tpl) {?><html>
 <head>
     <meta charset="UTF-8"> 
     <title></title>
@@ -42,14 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <body>
 
-<form style="width: 80%" onsubmit="return false">
-  <h1>* Successfully performed Settings!</h1>
-  <div class="inset">
-  </div>
-  <p class="p-container">
-    <span id="error" style="color: #f0c040"></span>
-    <input type="submit" name="go" id="go" value="Sign in" onclick="window.location.href='/dexlene-framework/app/'">
-  </p>
+<form style="width: 80%">
+  <h1>Erro: Not found class Dexlene-frameworkController();</h1>
 </form>
 
 

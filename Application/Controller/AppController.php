@@ -37,6 +37,8 @@ Class AppController extends Controller {
     
     public function users() {
         $this->layout = "Startbootstrap-sb-admin-1.0.2";
+        $this->factory->_tabela = $this->page;
+        $this->assign("th", $this->factory->renderTh());     
     }
 
 }

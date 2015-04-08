@@ -139,7 +139,7 @@ class Database{
 
                     INSERT INTO permissions VALUES('{$premission_id}', '{$group_id}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 1, 1, 1, 1, 1, 1,'{$user_id}', '0');";
 
-                $sql = $this->factory->sql()->query($query);
+                $sql = $this->factory->db->query($query);
             }
             die(json_encode(array('outcome' => true)));
         }

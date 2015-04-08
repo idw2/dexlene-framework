@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2015-04-08 17:21:43
+<?php /* Smarty version Smarty-3.1.19, created on 2015-04-08 18:12:48
          compiled from "C:\xampp\htdocs\dexlene-framework\Application\View\App\username_config.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2461555254787efaf92-47630172%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6168552553806f8ce5-27223899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2461555254787efaf92-47630172',
+  'nocache_hash' => '6168552553806f8ce5-27223899',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_55254788019548_65093138',
+  'unifunc' => 'content_55255380761d33_38018934',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55254788019548_65093138')) {function content_55254788019548_65093138($_smarty_tpl) {?><form method="post" name="uForm">
+<?php if ($_valid && !is_callable('content_55255380761d33_38018934')) {function content_55255380761d33_38018934($_smarty_tpl) {?><form method="post" name="uForm">
   <h1>USERNAME SYSTEM</h1>
   <div class="inset">
   <p>

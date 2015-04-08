@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:21832552562ba1b9f41-70159004%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:339755256b004f5275-11929900%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -39,13 +39,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21832552562ba1b9f41-70159004',
+  'nocache_hash' => '339755256b004f5275-11929900',
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552562ba6d6e57_45707105',
+  'unifunc' => 'content_55256b009de767_72379170',
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552562ba6d6e57_45707105')) {function content_552562ba6d6e57_45707105($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55256b009de767_72379170')) {function content_55256b009de767_72379170($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -273,7 +273,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <thead>
                     <tr>
                         
-                        <tr><th>id</th><th>username</th><th>password</th><th>created</th><th>modified</th><th>name</th><th>email</th><th>status</th><th>ordem</th><th>owner</th><th>trash</th><tr>
+                        <tr><th>Login</th><th>Criado em</th><th>Modificado em</th><th>Nome</th><th>E-mail</th><th>status</th><th>Posição</th><th>Criado por</th><tr>
                     </tr>
                 </thead>
                 <tbody>

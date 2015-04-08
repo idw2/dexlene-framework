@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:25579552562ba1261f4-87232927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1478055256b0043a983-84479766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,17 +9,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '25579552562ba1261f4-87232927',
+  'nocache_hash' => '1478055256b0043a983-84479766',
   'variables' => 
   array (
     'th' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552562ba19af10_72143282',
+  'unifunc' => 'content_55256b004c0093_24811182',
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552562ba19af10_72143282')) {function content_552562ba19af10_72143282($_smarty_tpl) {?><div class="row">
+<?php if ($_valid && !is_callable('content_55256b004c0093_24811182')) {function content_55256b004c0093_24811182($_smarty_tpl) {?><div class="row">
     <div class="col-lg-12">
         <h2>Contextual Classes</h2>
         <div class="table-responsive">
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <thead>
                     <tr>
                         
-                        <tr><th>id</th><th>username</th><th>password</th><th>created</th><th>modified</th><th>name</th><th>email</th><th>status</th><th>ordem</th><th>owner</th><th>trash</th><tr>
+                        <tr><th>Login</th><th>Criado em</th><th>Modificado em</th><th>Nome</th><th>E-mail</th><th>status</th><th>Posição</th><th>Criado por</th><tr>
                     </tr>
                 </thead>
                 <tbody>

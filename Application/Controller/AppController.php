@@ -36,7 +36,7 @@ Class AppController extends Controller {
     }
 
     public function users() {
-        #$this->layout = "Startbootstrap-sb-admin-1.0.2";
+        $this->layout = "Startbootstrap-sb-admin-1.0.2";
         $this->factory->_tabela = $this->page;
         $this->assign("th", $this->factory->renderTh(
                         array("heads" =>
@@ -67,18 +67,28 @@ Class AppController extends Controller {
                 )
         );
 
-        $aqui = $this->factory->renderList(array(
+        $this->assign("rows", $this->factory->renderList(array(
             'table' => 'users',
             'alias' => 'User',
             'fields' => "*",
-            'limit' => array(0,100),
+            'limit' => array(0, 100),
             'where' => NULL,
+            'joins' => array(array(
+                    'join' => 'INNER',
+                    'alias' => 'Grp',
+                    'table' => 'groups',
+                    'conditions' => '`Grp`.user_id = `User`.id'),
+                array(
+                    'join' => 'INNER',
+                    'alias' => 'Permission',
+                    'table' => 'permissions',
+                    'conditions' => '`Permission`.group_id = `Grp`.id'),
+            ),
             'order_by' => array('order' => 'desc',
                 'fields' => array('created')),
             'group_by' => 'id'
-        ));
-        
-        var_dump($aqui);
+        )));
+
     }
 
 }

@@ -1,3 +1,3 @@
 {php}
-echo "Hello World!";
+ var_dump(array("Hello World!"));
 {/php}

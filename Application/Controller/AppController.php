@@ -36,7 +36,7 @@ Class AppController extends Controller {
     }
 
     public function users() {
-        $this->layout = "Startbootstrap-sb-admin-1.0.2";
+        #$this->layout = "Startbootstrap-sb-admin-1.0.2";
         $this->factory->_tabela = $this->page;
         $this->assign("th", $this->factory->renderTh(
                         array("heads" =>
@@ -51,21 +51,34 @@ Class AppController extends Controller {
                                 'modified' => 'Modificado em',
                                 'name' => 'Nome'
                             ),
-//                            "positions" =>
-//                            array("owner" => "Criado por",
-//                                "id" => NULL,
-//                                'password' => NULL,
-//                                'trash' => NULL,
-//                                'email' => "E-mail",
-//                                'ordem' => "Posição",
-//                                'username' => 'Login',
-//                                'created' => 'Criado em',
-//                                'modified' => 'Modificado em',
-//                                'name' => 'Nome'
-//                            )
+                            "positions" =>
+                            array("owner" => 7,
+                                "id" => NULL,
+                                'password' => NULL,
+                                'trash' => NULL,
+                                'email' => 5,
+                                'ordem' => 6,
+                                'username' => 4,
+                                'created' => 1,
+                                'modified' => 2,
+                                'name' => 3
+                            )
                         )
                 )
         );
+
+        $aqui = $this->factory->renderList(array(
+            'table' => 'users',
+            'alias' => 'User',
+            'fields' => "*",
+            'limit' => array(0,100),
+            'where' => NULL,
+            'order_by' => array('order' => 'desc',
+                'fields' => array('created')),
+            'group_by' => 'id'
+        ));
+        
+        var_dump($aqui);
     }
 
 }

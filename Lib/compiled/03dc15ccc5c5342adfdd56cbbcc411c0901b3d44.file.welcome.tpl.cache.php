@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2015-04-08 19:22:33
+<?php /* Smarty version Smarty-3.1.19, created on 2015-04-09 07:29:38
          compiled from "C:\xampp\htdocs\dexlene-framework\Application\View\App\welcome.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:25856552563d96a2c93-59182479%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:44765526549206ad45-87798726%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '25856552563d96a2c93-59182479',
+  'nocache_hash' => '44765526549206ad45-87798726',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552563d96c6635_95953373',
+  'unifunc' => 'content_5526549211d348_95231158',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552563d96c6635_95953373')) {function content_552563d96c6635_95953373($_smarty_tpl) {?><!-- /.row -->
+<?php if ($_valid && !is_callable('content_5526549211d348_95231158')) {function content_5526549211d348_95231158($_smarty_tpl) {?><!-- /.row -->
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">

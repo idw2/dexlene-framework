@@ -1,6 +1,10 @@
 <div class="row">
     <div class="col-lg-12">
-        <h2>Contextual Classes</h2>
+        <p>
+            <button type="button" class="btn btn-lg btn-default">Novo usuário</button>
+            <button type="button" class="btn btn-lg btn-default">Grupos</button>
+        </p>
+        
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
@@ -13,7 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="active">
+                    {*<tr class="active">
                         <td>/index.html</td>
                         <td>1265</td>
                         <td>32.3%</td>
@@ -54,7 +58,7 @@
                         <td>1233</td>
                         <td>93.2%</td>
                         <td>$126.34</td>
-                    </tr>
+                    </tr>*}
                 </tbody>
             </table>
         </div>

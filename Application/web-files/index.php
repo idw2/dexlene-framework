@@ -73,6 +73,7 @@ if (!defined('REQUEST_URI')) {
  * CARREGANDO MODELO TPL SMARTY
  */
 require_once ROOT_LIB . "Smarty.class.php";
+require_once ROOT_LIB . "SmartyBC.class.php";
 require_once ROOT_LIB . "Smarty.php";
 
 /*

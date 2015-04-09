@@ -1,10 +1,16 @@
 <?php
 
-class My_smarty extends Smarty {
+class My_smarty extends SmartyBC {
 
-    function get_smarty() {
+//    public $default_template_dir    =  'templates';
+    
+    public function __construct() {
         parent::__construct();
-
+    }
+    
+    function get_smarty() {
+        
+        
         $this->setCacheDir(ROOT_LIB . "cache");
         $this->setConfigDir(ROOT_LIB . "config");
         $this->setTemplateDir(VIEW_DIR);
@@ -12,15 +18,17 @@ class My_smarty extends Smarty {
 
         $this->force_compile = 1;
         $this->caching = true;
-        $this->cache_lifetime = 120;
+        $this->cache_lifetime = 3600;
+        
     }
 
     function view_tpl($template_name) {
+        
         if (strpos($template_name, '.') === FALSE && strpos($template_name, ':') === FALSE) {
             $template_name .= '.tpl';
             $this->display($template_name);
         } else {
-            $this->display($template_name);   
+            $this->display($template_name);
         }
     }
 

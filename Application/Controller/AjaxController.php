@@ -99,12 +99,12 @@ class Database{
                         `email` varchar(255) DEFAULT NULL,
                         `status` tinyint(1) DEFAULT '1',
                         `ordem` int(11) NOT NULL DEFAULT '0',
-                        `owner` char(45) NOT NULL,
+                        `owner` char(32) NOT NULL,
                         `trash` char(1) NOT NULL DEFAULT '0',
                         PRIMARY KEY(`id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;    
 
-                    INSERT INTO users VALUES('{$user_id}', '{$username}', '{$password}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '{$name}', '{$email}', 1, 1,'owner', '0');
+                    INSERT INTO users VALUES('{$user_id}', '{$username}', '{$password}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '{$name}', '{$email}', 1, 1,'{$user_id}', '0');
 
                     CREATE TABLE IF NOT EXISTS `groups` (
                         `id` char(32) NOT NULL,
@@ -114,7 +114,7 @@ class Database{
                         `group` varchar(255) DEFAULT NULL,
                         `status` tinyint(1) DEFAULT '1',
                         `ordem` int(11) NOT NULL DEFAULT '0',
-                        `owner` char(45) NOT NULL,
+                        `owner` char(32) NOT NULL,
                         `trash` char(1) NOT NULL DEFAULT '0',
                         PRIMARY KEY(`id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
@@ -132,7 +132,7 @@ class Database{
                         `view` char(1) DEFAULT NULL,
                         `status` tinyint(1) DEFAULT '1',
                         `ordem` int(11) NOT NULL DEFAULT '0',
-                        `owner` char(45) NOT NULL,
+                        `owner` char(32) NOT NULL,
                         `trash` char(1) NOT NULL DEFAULT '0',
                         PRIMARY KEY(`id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;

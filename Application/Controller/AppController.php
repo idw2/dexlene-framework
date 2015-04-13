@@ -35,8 +35,9 @@ Class AppController extends Controller {
         $this->layout = "Startbootstrap-sb-admin-1.0.2";
     }
 
-    public function users() {
+    public function users($qntdd = NULL, $page = NULL) {
         $this->layout = "Startbootstrap-sb-admin-1.0.2";
+        $limit = $this->factory->getLimitPaginator();
         $this->factory->_tabela = $this->page;
         $this->assign("th", $this->factory->renderTh(
                         array("heads" =>
@@ -46,18 +47,20 @@ Class AppController extends Controller {
                                 'trash' => NULL,
                                 'email' => "E-mail",
                                 'ordem' => "Posição",
+                                'status' => "Situação",
                                 'username' => 'Login',
                                 'created' => 'Criado em',
                                 'modified' => 'Modificado em',
                                 'name' => 'Nome'
                             ),
                             "positions" =>
-                            array("owner" => 7,
+                            array("owner" => 8,
                                 "id" => NULL,
                                 'password' => NULL,
                                 'trash' => NULL,
                                 'email' => 5,
                                 'ordem' => 6,
+                                'status' => 7,
                                 'username' => 4,
                                 'created' => 1,
                                 'modified' => 2,
@@ -67,11 +70,12 @@ Class AppController extends Controller {
                 )
         );
 
-        $this->assign("rows", $this->factory->renderList(array(
+        $users = array(
+            'get' => 'rows',
             'table' => 'users',
             'alias' => 'User',
             'fields' => "*",
-            'limit' => array(0, 100),
+            'limit' => $limit,
             'where' => NULL,
             'joins' => array(array(
                     'join' => 'INNER',
@@ -87,9 +91,13 @@ Class AppController extends Controller {
             'order_by' => array('order' => 'desc',
                 'fields' => array('created')),
             'group_by' => 'id'
-        )));
+        );
         
-
+        $this->assign("rows", $this->factory->renderList($users));
+        $this->assign("paginator", $this->factory->Paginator($users));
+        
+//        var_dump($this->factory->Paginator($users));
+        
     }
 
 }

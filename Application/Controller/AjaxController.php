@@ -69,6 +69,12 @@ class Database{
         $username = $_POST["username"];
         $password = $_POST["password"];
         $repeat_password = $_POST["repeat_password"];
+        
+//        $name = "Rogério Pontes";
+//        $email = "rogerio@designlab.com.br";
+//        $username = "rogerio";
+//        $password = "123";
+//        $repeat_password = "123";
 
         if (!preg_match("/^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$/", $name)) {
             die(json_encode(array('outcome' => false, 'message' => '* Invalid name!')));

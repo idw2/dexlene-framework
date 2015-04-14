@@ -67,5 +67,9 @@ Class UsersController extends Controller {
         $this->assign("rows", $this->factory->renderList($users));
         $this->assign("paginator", $this->factory->Paginator($users));
     }
+    
+    public function add(){
+        $this->layout = "Startbootstrap-sb-admin-1.0.2";
+    }
 
 }

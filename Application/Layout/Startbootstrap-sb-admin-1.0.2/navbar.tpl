@@ -120,7 +120,7 @@
             {*<li class="active">
                 <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>*}
-            <li {if $page == "UsersController/index"}class="active"{/if}>
+            <li {if $page == "UsersController/index" || $page == "UsersController/add"}class="active"{/if}>
                 <a href="{$request_uri}users"><i class="fa fa-fw fa-users"></i> Usuários</a>
             </li>
             <li>

@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:20352552d12ac14be39-12414286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:735552d50a95e24f7-32999094%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,7 +9,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20352552d12ac14be39-12414286',
+  'nocache_hash' => '735552d50a95e24f7-32999094',
   'variables' => 
   array (
     'paginator' => 0,
@@ -20,10 +20,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552d12ac532bb8_53981148',
+  'unifunc' => 'content_552d50a99f5b96_53743146',
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552d12ac532bb8_53981148')) {function content_552d12ac532bb8_53981148($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_552d50a99f5b96_53743146')) {function content_552d50a99f5b96_53743146($_smarty_tpl) {?>
 <div class="row">
     <div class="col-lg-6" style="line-height: 6;">
         <button type="button" class="btn btn-lg btn-default">Novo usuário</button>

@@ -18,6 +18,8 @@
                     Boas vindas
                 {elseif $page == "UsersController/index"}
                     Usuários <small>Grupos e premissões</small>
+                {elseif $page == "UsersController/add"}
+                    Usuários <small>Novo usuário</small>    
                 {/if}
             </li>
         </ol>

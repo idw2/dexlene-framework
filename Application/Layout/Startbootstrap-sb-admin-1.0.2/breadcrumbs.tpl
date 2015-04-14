@@ -2,9 +2,9 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            {if $page == "welcome"}
+            {if $page == "AppController/welcome"}
                 Página inicial
-            {elseif $page == "users"}
+            {elseif $page == "UsersController/index"}
                 Usuários <small>Grupos e premissões</small>
             {/if}    
         </h1>
@@ -14,9 +14,9 @@
             </li>
             <li class="active">
                 <i class="fa fa-desktop"></i>
-                {if $page == "welcome"}
+                {if $page == "AppController/welcome"}
                     Boas vindas
-                {elseif $page == "users"}
+                {elseif $page == "UsersController/index"}
                     Usuários <small>Grupos e premissões</small>
                 {/if}
             </li>

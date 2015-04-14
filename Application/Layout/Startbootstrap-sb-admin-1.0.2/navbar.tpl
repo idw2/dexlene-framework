@@ -114,14 +114,14 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li {if $page == "welcome"}class="active"{/if}>
+            <li {if $page == "AppController/welcome"}class="active"{/if}>
                 <a href="{$request_uri}app/welcome"><i class="fa fa-fw fa-home"></i> Home</a>
             </li>
             {*<li class="active">
                 <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>*}
-            <li {if $page == "users"}class="active"{/if}>
-                <a href="{$request_uri}app/users"><i class="fa fa-fw fa-users"></i> Usuários</a>
+            <li {if $page == "UsersController/index"}class="active"{/if}>
+                <a href="{$request_uri}users"><i class="fa fa-fw fa-users"></i> Usuários</a>
             </li>
             <li>
                 <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>

@@ -41,7 +41,11 @@ Class htmlHelpers extends Controller {
     public function paginator(Array $dados) {
 
         $params = array_filter(explode("/", $_GET['url']));
-
+        
+        if(sizeof($params) == 1){
+            $params[1] = "index";
+        }
+        
         $qntdd = (int) $dados['limit_qntdd'];
         $antes = ((int)$dados['limit_page'] - 1);
         $depois = ((int)$dados['limit_page'] + 1);

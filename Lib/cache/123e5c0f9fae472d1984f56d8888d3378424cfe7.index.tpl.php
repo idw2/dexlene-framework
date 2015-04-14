@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:6658552c288f1c4a50-54642296%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11589552d1248b158b8-84159940%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6658552c288f1c4a50-54642296',
+  'nocache_hash' => '11589552d1248b158b8-84159940',
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552c288f36d3e0_20563335',
+  'unifunc' => 'content_552d1248c7c070_97204492',
   'cache_lifetime' => 3600,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552c288f36d3e0_20563335')) {function content_552c288f36d3e0_20563335($_smarty_tpl) {?><html>
+<?php if ($_valid && !is_callable('content_552d1248c7c070_97204492')) {function content_552d1248c7c070_97204492($_smarty_tpl) {?><html>
 <head>
     <meta charset="UTF-8"> 
     <title></title>
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body>
 
 <form style="width: 80%">
-  <h1>Erro: Not found file .tpl in class  and folder View\ </h1>
+  <h1>Erro: Not found file users.tpl in class AppController and folder View\App </h1>
 </form>
 
 

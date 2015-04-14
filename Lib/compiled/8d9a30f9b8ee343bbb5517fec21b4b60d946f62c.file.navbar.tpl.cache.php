@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2015-04-13 23:25:35
+<?php /* Smarty version Smarty-3.1.19, created on 2015-04-14 15:14:20
          compiled from "C:\xampp\htdocs\dexlene-framework\Application\Layout\Startbootstrap-sb-admin-1.0.2\navbar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21167552c344fec1b30-52709898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:25516552d12ac770309-34183626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8d9a30f9b8ee343bbb5517fec21b4b60d946f62c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dexlene-framework\\Application\\Layout\\Startbootstrap-sb-admin-1.0.2\\navbar.tpl',
-      1 => 1428256116,
+      1 => 1429017222,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21167552c344fec1b30-52709898',
+  'nocache_hash' => '25516552d12ac770309-34183626',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_552c345002c3a6_88656648',
+  'unifunc' => 'content_552d12ac860518_15072933',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_552c345002c3a6_88656648')) {function content_552c345002c3a6_88656648($_smarty_tpl) {?><!-- Navigation -->
+<?php if ($_valid && !is_callable('content_552d12ac860518_15072933')) {function content_552d12ac860518_15072933($_smarty_tpl) {?><!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -140,14 +140,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li <?php if ($_smarty_tpl->tpl_vars['page']->value=="welcome") {?>class="active"<?php }?>>
+            <li <?php if ($_smarty_tpl->tpl_vars['page']->value=="AppController/welcome") {?>class="active"<?php }?>>
                 <a href="<?php echo $_smarty_tpl->tpl_vars['request_uri']->value;?>
 app/welcome"><i class="fa fa-fw fa-home"></i> Home</a>
             </li>
             
-            <li <?php if ($_smarty_tpl->tpl_vars['page']->value=="users") {?>class="active"<?php }?>>
+            <li <?php if ($_smarty_tpl->tpl_vars['page']->value=="UsersController/index") {?>class="active"<?php }?>>
                 <a href="<?php echo $_smarty_tpl->tpl_vars['request_uri']->value;?>
-app/users"><i class="fa fa-fw fa-users"></i> Usuários</a>
+users"><i class="fa fa-fw fa-users"></i> Usuários</a>
             </li>
             <li>
                 <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
